@@ -2,8 +2,15 @@ require 'ffaker'
 require './models/speaker.rb'
 
 5.times do
-  first = FFaker::Name.last_name
-  last = FFaker::Name.first_name
-  email = FFaker::Internet.free_email
-  # speaker = Speaker.new({})
+  args = {
+            first_name: FFaker::Name.first_name,
+            last_name: FFaker::Name.last_name,
+            email: FFaker::Internet.free_email,
+            phone: FFaker::PhoneNumber.short_phone_number
+          }
+  speaker = Speaker.create(args)
+end
+
+Speaker.all.each do |speaker|
+  p speaker
 end
