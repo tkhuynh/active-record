@@ -6,4 +6,6 @@ city = "Oakland"
 state = "California"
 favorite_thing = "geraniums"
 
-p "Hello, my name is Generic Student and I live at 123 Rudimentary Dr, Oakland California. I lurv geraniums!"
+for i in 0...10	
+	p "Hello, my name is #{first_name} #{last_name} and I live at #{street_number} #{street_address}, #{city} #{state}. I lurv #{favorite_thing}!"
+end
